@@ -39,9 +39,11 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-pe
+PRODUCT_PACKAGES += \
+    WhyredFrameworksOverlay \
+    WhyredSettingsOverlay \
+    WhyredSystemUIOverlay \
+    WhyredWifiOverlay
 
 # Powerhint
 PRODUCT_COPY_FILES += \
