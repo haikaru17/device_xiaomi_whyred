@@ -34,9 +34,10 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += \
-    $(DEVICE_PATH)/overlay \
-    $(DEVICE_PATH)/overlay-pe
+PRODUCT_PACKAGES += \
+    WhyredFrameworksOverlay \
+    WhyredSystemUIOverlay \
+    WhyredWifiOverlay 
 
 # Powerhint
 EAS_POWERHINT_VARIANT := sdm636
@@ -57,10 +58,6 @@ PRODUCT_COPY_FILES += \
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb@1.0-service.basic
-
-# Wifi
-PRODUCT_PACKAGES += \
-    WhyredWifiOverlay
 
 # Inherit the proprietary files
 $(call inherit-product, vendor/xiaomi/whyred/whyred-vendor.mk)
